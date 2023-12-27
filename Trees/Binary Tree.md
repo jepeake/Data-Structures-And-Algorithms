@@ -1,6 +1,3 @@
-
-- - - 
-
 ***Binary Tree***
 
 - - - 
@@ -53,7 +50,7 @@ class TreeNode {
 - *→ sometimes the height is counted by the number of edges that are in between the nodes instead of the nodes themselves (height of tree = n-1 = number of edges)*
 
 ***Depth***
-- *→ depth of a binary tree node - measured from itself up to the root
+- *→ depth of a binary tree node - measured from itself up to the root*
 
 ***Ancestor***
 - → *a node connected to all of the nodes below it - considered an ancestor to those nodes*
