@@ -1,6 +1,3 @@
-
-- - - 
-
 ***Binary Search Tree***
 
 - - - 
@@ -17,7 +14,7 @@
 
 ***Motivation***
 
-- *with BSTs → can search values in $O(logn)$ time - while also running insertion/deletion in $O(logn)$ time (this takes $O(n)$ time with an array)*
+- *with BSTs → can search values in* $O(logn)$ *time - while also running insertion/deletion in* $O(logn)$ *time (this takes* $O(n)$ *time with an array)*
 - *so while BSTs don’t offer benefit over sorted arrays for search functionality - they are better for insertion/deletion*
 
 - - - 
@@ -26,9 +23,6 @@
 
 - *trees are best traversed through recursion (could do iteratively - but would require maintaining a stack)*
 - *take this BST & target 3*
-
-![](https://imagedelivery.net/CLfkmk9Wzy8_9HRyug4EVA/9c42ae26-33f4-4110-e49b-509c7dae3600/sharpen=1)
-
 - *start by comparing the root value against the target*
 - *2 is too small - so our target must be on the right - meaning we can eliminate the left subtree*
 - *when we go right - the first node is 3 - which equals target - so we return true from that recursive call, meaning our target does exist in the tree*
@@ -54,11 +48,11 @@ bool search(TreeNode* root, int target) {
 ***Complexity (BST Search)***
 
 ***Time Complexity:***
-- ***balanced binary tree → search algorithm: $O(logn)$**
+- ***balanced binary tree → search algorithm:*** $O(logn)$
 - *balanced → height of the left subtree = height of the right subtree (or a difference of 1)*
 - *in a balanced tree we eliminate half of the nodes each time → $O(logn)$*
 
-- *in a skewed binary tree → time complexity $O(n)$ (worst case)*
+- *in a skewed binary tree → time complexity* $O(n)$ *(worst case)*
 
 <br>
 
