@@ -1,2 +1,3 @@
-# Algorithms---Data-Structures
-Notes on Algorithms &amp; Data Structures.
+# _Data Structures & Algorithms_
+
+_A Collection of Notes on Data Structures &amp; Algorithms (DSA)._
