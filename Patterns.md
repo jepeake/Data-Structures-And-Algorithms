@@ -12,7 +12,7 @@
 - → *used to **detect cycles in a structure/find middle elements/solve linked list problems***
 - → (*two pointers for linked lists*)
 
-***Sliding Window*** (*[[Sliding Window Fixed Size]] & [[Sliding Window Variable Size]]*)
+***Sliding Window*** (*Sliding Window Fixed Size & Sliding Window Variable Size*)
 - → *creating a window into the data structure & then moving that window to gather information*
 - → *used on **arrays***
 - → ***used to find a contiguous subset that fulfils certain conditions***
@@ -85,5 +85,5 @@
 ***Ordered Set***
 
 ***Multi-Threaded***
-- → *designing algorithms that can execute multiple threads in parallel
+- → *designing algorithms that can execute multiple threads in parallel*
 - → *used in situations where a **task can be divided into independent sub-tasks that can execute concurrently***
