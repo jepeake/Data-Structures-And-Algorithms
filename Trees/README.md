@@ -2,9 +2,9 @@
 
 _Contents:_
 
-***Binary Tree**
+***Binary Tree***
 
-**Binary Search Tree***
+***Binary Search Tree***
 
 ***BST Insert & Remove***
 
