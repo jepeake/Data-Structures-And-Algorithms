@@ -4,14 +4,22 @@
 
 ***Union Find***
 
-→ ***keeping track of connected components in a graph**
+→ ***keeping track of connected components in a graph***
+
 → ***detecting cycles in a graph***
 
+<br>
+
 ***Find:*** *determines which set particular element belongs to by finding parent node*
+
 ***Union:*** *joins two sets together by taking parents & making one parent of another*
+
+<br>
 
 - *this can be achieved with DFS using a hashset*
 - *DFS is a good choice when using a static graph (i.e. no edges can be added over time)*
+
+<br>
 
 - *Union Find a better choice for **dynamic graphs (adding edges over time)***
 
@@ -22,6 +30,8 @@
 ***→ do not have any elements in common***
 ***→ their intersection is the empty set***
 
+<br>
+
 - *Union Find operates on Disjoint Sets*
 - *to perform a union of two vertices → ensure those vertices belong to disjoint sets*
 
@@ -30,24 +40,32 @@
 ***Example***
 
 - *given an array of edges*
-- *e.g. `edges: [1,2], [4,1], [2,4]
+- *e.g. edges: [1,2], [4,1], [2,4]*
 - *each array in edges in an undirected, connected pair of vertices*
 - *build a graph of connected components*
 
+<br>
+
 - *Union Find → Forest of Trees → Many Trees of Connected Components*
-- ***Union: join two sets together*
-- ***Find: determine the set which a particular element belongs to - by finding the parent node*
+- ***Union: join two sets together***
+- ***Find: determine the set which a particular element belongs to - by finding the parent node***
+
+<br>
 
 - *initially → each vertex exists by itself*
 - *for each vertex, the pointer to it’s parent, points to itself*
 
-![[ppanblsw.bmp]]
+<br>
 
-- *from the array of edges, want to join the nodes together, to create connected components
-- *this can be done by finding the parent of the vertices, and then making the one of the parents the child of the other parent
+- *from the array of edges, want to join the nodes together, to create connected components*
+- *this can be done by finding the parent of the vertices, and then making the one of the parents the child of the other parent*
 
-- *this ensures that the connected vertices are part of the same component
+<br>
+
+- *this ensures that the connected vertices are part of the same component*
 - *the correct graph structure is not maintained, but the connected components are correct*
+
+<br>
 
 - *which parent is selected to be the parent/child matters when the two components have different ranks (height)*
 - *as we want the components to be as balanced as possible*
@@ -74,11 +92,17 @@ public:
 - *to implement the Union Find → use a UnionFind class*
 - *instantiates a parent & rank HashMap*
 
+<br>
+
 - *the parent map stores the parent of each vertex*
 - *initially each vertex is its own parent, representing that each element is in its own set*
 - *when the two sets are unioned, the parent of one vertex is updated to point to the other parent*
 
+<br>
+
 - *the rank map stores the rank (height) of the trees represented by each vertex*
+
+<br>
 
 - *the constructor takes an integer n, representing n vertices*
 - *the parent of each vertex is set to itself*
@@ -127,6 +151,8 @@ int find(int n) {
 - *this does not give any performance improvements for the first iteration, will when finding the parent of that vertex again*
 - *this is the iterative approach*
 
+<br>
+
 - *there is also full (recursive) path compression, which updates each node to point directly to the root as you go up the tree*
 
 ```cpp
@@ -169,22 +195,21 @@ bool union(int n1, int n2) {
 - *if they are of different rank → the parent with the lowest rank becomes the child to the parent with the highest rank*
 - *if they are the same rank → choose either (set p2 to be the parent of p1) and increment the rank by 1*
 
-*example:*
-![[1u1a6syv.bmp]]
+<br>
 
-- *when we get to [2,4] → have the same parent → they belong to the same connected component → there is a cycle in the graph*
+- ***if nodes belong to the same connected component → there is a cycle in the graph***
 
 - - - 
 
 ***Complexity***
 
-***Space Complexity: $O(n)$
+***Space Complexity:*** $O(n)$
 
 ***Find:***
-- *without path compression → **Time Complexity:** $O(n)$*
+- *without path compression → **Time Complexity:*** $O(n)$
 - *as tree is just like a chain in a linked list in which we have to traverse every single node to find the parent*
 
-- *with path compression → **Time Complexity** $O(logn)$ (since we are updating the parent to be the grandparent each time)*
+- *with path compression → **Time Complexity*** $O(logn)$ *(since we are updating the parent to be the grandparent each time)*
 
 - *with union by rank → **Time Complexity:*** $O(logn)$
 
@@ -192,7 +217,7 @@ bool union(int n1, int n2) {
 
 - *Find runs for number of edges* $m$
 - → ***Total Time Complexity:*** $O(mlogn)$ 
-- → ***Total Time Complexity:*** $O(m)$ *(with path compression & union by rank)
+- → ***Total Time Complexity:*** $O(m)$ *(with path compression & union by rank)*
 
 ***Union***
 -  ***Time Complexity*** $O(1)$
