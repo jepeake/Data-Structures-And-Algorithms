@@ -19,9 +19,9 @@
 
 ***Operations***
 
-- → ***reading*
-- → ***traversal*
-- → ***deletion*
+- → ***reading***
+- → ***traversal***
+- → ***deletion***
 - → ***insertion***
 
 - - - 
@@ -40,7 +40,7 @@ myArray[i];
 - *each index of myArray is mapped to an address in RAM*
 - *regardless of size of input array (3 here) → time taken to access element (given a known index) is constant*
 
-- ***time complexity → $O(1)$*
+- ***time complexity*** → $O(1)$
 
 - - -
 
@@ -57,7 +57,7 @@ for (int i = 0; i < length; i++){
 
 - *length-1 is the last accessible index of the array (n-1 if n is the size of the array)*
 
-- ***time complexity → $O(n)$*
+- ***time complexity*** → $O(n)$
 
 - - - 
 
@@ -76,10 +76,7 @@ void removeEnd(int arr[], int length) {
 }
 ```
 
-![deletion-at-end|500](https://imagedelivery.net/CLfkmk9Wzy8_9HRyug4EVA/e081b055-98b3-4edd-55f6-8fa6cc59d500/sharpen=1)
-
-- *6 is deleted/overwritten by either 0 or -1 → length decremented by 1*
-- ***time complexity → $O(1)$*
+- ***time complexity*** → $O(1)$
 
 - - - 
 
@@ -97,9 +94,7 @@ void removeMiddle(int arr[], int i, int length){
 }
 ```
 
-![removal-0th-index](https://imagedelivery.net/CLfkmk9Wzy8_9HRyug4EVA/2888f751-1ae4-4534-68ba-1b42689a0b00/sharpen=1)
-
-- ***time complexity → $O(n)$*
+- ***time complexity*** → $O(n)$
 
 - - - 
 
@@ -118,7 +113,7 @@ void insertEnd(int arr[], int n, int length, int capcity){
 
 - *length is the number of elements inside the array, capacity refers to the maximum number of elements the array can hold*
 
-- ***time complexity → $O(1)$*
+- ***time complexity*** → $O(1)$
 
 - - - 
 
@@ -137,10 +132,8 @@ void insertMiddle(int arr[], int i, int n, int length){
 }
 ```
 
-![insertion-at-i](https://imagedelivery.net/CLfkmk9Wzy8_9HRyug4EVA/34345b51-7e7d-478f-5ba1-68672e931200/sharpen=1)
-
 - *shifting occurs prior to insertion to ensure values are not overwritten*
-- ***time complexity → $O(n)$*
+- ***time complexity*** → $O(n)$
 
 - - - 
 
@@ -148,11 +141,12 @@ void insertMiddle(int arr[], int i, int n, int length){
 
 ***Time:***
 
-|Operation|Big-O Time|Notes|
+|Operation|Time|Notes|
 |---|---|---|
 |Access|O(1)||
 |Insertion|O(1)∗|O(n) if insertion in the middle since shifting will be required|
 |Deletion|O(1)∗|O(n) if deletion in the middle since shifting will be required|
+
 ***Space:***
 - → $O(n)$
 - → *n elements in array* 
