@@ -2,11 +2,9 @@
 
 - - - 
 
-***→ allows us to organise words based on the first few letters (prefix)
+***→ allows us to organise words based on the first few letters (prefix)***
 
 - *letters are represented as the edges that connect the nodes*
-
-![[dj1rh0j8.bmp]]
 
 - *each node will have at most 26 children (number of letters in alphabet)*
 
@@ -14,13 +12,15 @@
 
 ***Operations***
 
-- *Insert Word: $O(1)$*
-- *Search Word: $O(1)$*
-- *Search Prefix: $O(1)$
+- *Insert Word:* $O(1)$
+- *Search Word:* $O(1)$
+- *Search Prefix:* $O(1)$
+
+<br>
 
 - *a hashmap can also insert & search for words in constant time*
 - *but it only supports an exact match for a string*
-- *so searching for a prefix will be $O(n)$ in a hashmap*
+- *so searching for a prefix will be* $O(n)$ *in a hashmap*
 - *this is the advantage of a prefix tree/trie*
 - *e.g. search engine autocomplete*
 
@@ -79,16 +79,7 @@ void insert(string word) {
 - *if it does already exist - we can keep traversing down the tree*
 - *once we have reached the last character - mark that TrieNode as a word - to indicate the end of the word*
 
-- *as we are using a HashMap to store the children → we can retrieve the children in $O(1)$ time (HashMap search is constant time)
-
-*insert apple:*
-![[rqdgubz2.bmp]]
-
-*insert ape:*
-![[xosrwsio.bmp]]
-
-*insert nope:*
-![[sj5bjbcw.bmp]]
+- *as we are using a HashMap to store the children → we can retrieve the children in* $O(1)$ *time (HashMap search is constant time)*
 
 ****
 
@@ -113,9 +104,6 @@ bool search(string word) {
 - *if we get to the last character - return True/False - depending on if that character is marked as the end of a word*
 - *e.g. if we added apple to the Trie, and then searched for app, the p would not be marked as the end of a word, so app would not be in the Trie*
 
-*search for no:*
-![[whd1ee0d.bmp]]
-
 - - - 
 
 ***Prefix Search***
@@ -134,9 +122,6 @@ bool startsWith(string prefix) {
 ```
 
 - *same as search, but instead of returning mark for end of word, return true if all characters in the prefix exist in our Trie*
-
-*search for prefix no:*
-![[1ad3dg77.bmp]]
 
 - - - 
 
