@@ -40,8 +40,6 @@ void bfs(TreeNode* root) {
 }
 ```
 
-![bfs](https://imagedelivery.net/CLfkmk9Wzy8_9HRyug4EVA/ba15b069-dd3c-4224-41c1-d9accf16d700/sharpen=1)
-
 - *append root onto the queue and loop through the queue such that at any given time - the queue only holds the nodes on a certain level*
 - *ensures that the levels are visited in order and that we do not mix up the levels*
 
@@ -56,12 +54,12 @@ void bfs(TreeNode* root) {
 
 ***Complexity***
 
-- *total work done = c x n, where n is the number of nodes in the tree, and c is the amount of work done to each node (printing the node, appending the node, and removing it)
-- ***Time Complexity → O(n)***
+- *total work done = c x n, where n is the number of nodes in the tree, and c is the amount of work done to each node (printing the node, appending the node, and removing it)*
+- ***Time Complexity*** → $O(n)$
 
 <br>
 
-- ***Space Complexity → $O(b)$***
+- ***Space Complexity*** → $O(b)$
 - *b - maximum breadth of the tree (max. number of tree nodes at any level)*
 - *for a balanced tree = last level →* $O(2^h)$
 
